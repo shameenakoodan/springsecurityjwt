@@ -9,4 +9,4 @@
     - Create a database named taskdb in MySQL
     - Add dependencies for jwt token inside pom.xml
     - Right click on the project - Select Maven -  Select Reload Project
-    
+    - Added entity,repository,configs and services package
