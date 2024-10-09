@@ -5,4 +5,5 @@
         * Language: Java
         * Packaging: Jar
         * Java: 23
+    - Add configuration settings inside application.properties
     
