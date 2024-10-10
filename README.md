@@ -1,35 +1,69 @@
-# springsecurityjwt
-# Steps
-    - Create a new project from https://start.spring.io/
-        * Project : Maven
-        * Language: Java
-        * Packaging: Jar
-        * Java: 23
-    - Add configuration settings inside application.properties
-    - Create a database named taskdb in MySQL
-    - Add dependencies for jwt token inside pom.xml
-    - Right click on the project - Select Maven -  Select Reload Project
-    - Add entity,repository,configs and services package
-    - Add ApplicationConfiguration,JwtAuthenticationFilter,SecurityConfiguration,AuthenticationController,LoginResponse,LoginUserDto,RegisterUserDto,User,AuthenticationService
-    - Open postman
-        * url :  http://localhost:8005/auth/signup
-        * method : POST
-        * Body : raw
-        * type: json
-        * input : {
-                    "email":"email@email.com",
-                    "password":"password",
-                    "fullName":"First Name"
-                    }
-    - Add User Controller and UserService files
-    - Open postman
-        * First repeat the above step to login
-        * url :  http://localhost:8005/auth/signup
-        * method : POST
-        * Body : raw
-        * type: json
-        * input : {
-                    "email":"email@email.com",
-                    "password":"password",
-                    }
-        
+# Spring Security JWT Authentication
+
+![Spring Security JWT](https://img.shields.io/badge/Spring%20Security-JWT-6DB33F?logo=spring&logoColor=white)
+
+A robust Spring Boot application implementing JWT (JSON Web Token) authentication to secure API endpoints. This project demonstrates how to integrate JWT with Spring Security, manage user registration and login, and protect sensitive routes using token-based authentication.
+
+## Table of Contents
+
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Project Structure](#project-structure)
+- [Running the Application](#running-the-application)
+- [API Endpoints](#api-endpoints)
+    - [User Registration](#user-registration)
+    - [User Login](#user-login)
+    - [Accessing Protected Routes](#accessing-protected-routes)
+- [Testing with Postman](#testing-with-postman)
+- [Exception Handling](#exception-handling)
+- [Reference](#reference)
+- [License](#license)
+
+## Features
+
+- **JWT Authentication**: Secure API endpoints using JSON Web Tokens.
+- **User Registration & Login**: Endpoints to register new users and authenticate existing ones.
+- **Protected Routes**: Restrict access to certain API endpoints based on authentication.
+- **Custom Exception Handling**: Provide meaningful error messages for various authentication and validation errors.
+- **Integration with MySQL**: Persist user data in a MySQL database.
+- **Lombok Integration**: Reduce boilerplate code with Lombok annotations.
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- **Java 23**: Ensure Java is installed on your machine. [Download Java](https://www.oracle.com/java/technologies/javase/jdk23-downloads.html)
+- **Maven**: Project management and comprehension tool. [Install Maven](https://maven.apache.org/install.html)
+- **MySQL**: Relational database management system. [Download MySQL](https://dev.mysql.com/downloads/mysql/)
+- **Postman**: API testing tool. [Download Postman](https://www.postman.com/downloads/)
+- **IDE**: IntelliJ IDEA, Eclipse, or any preferred Java IDE with Lombok support.
+
+## Installation
+
+Follow these steps to set up and run the project locally.
+
+### 1. Create a New Spring Boot Project
+
+Use [Spring Initializr](https://start.spring.io/) to create a new Spring Boot project with the following configurations:
+
+- **Project**: Maven
+- **Language**: Java
+- **Packaging**: Jar
+- **Java Version**: 23
+- **Dependencies**:
+    - Spring Web
+    - Spring Security
+    - Spring Data JPA
+    - MySQL Driver
+    - Lombok
+    - JWT (e.g., `jjwt`)
+
+### 2. Clone the Repository
+
+If you have a repository set up, clone it. Otherwise, initialize a new Git repository.
+
+```bash
+git clone https://github.com/yourusername/springsecurityjwt.git
+cd springsecurityjwt
