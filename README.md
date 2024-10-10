@@ -21,3 +21,15 @@
                     "password":"password",
                     "fullName":"First Name"
                     }
+    - Add User Controller and UserService files
+    - Open postman
+        * First repeat the above step to login
+        * url :  http://localhost:8005/auth/signup
+        * method : POST
+        * Body : raw
+        * type: json
+        * input : {
+                    "email":"email@email.com",
+                    "password":"password",
+                    }
+        
