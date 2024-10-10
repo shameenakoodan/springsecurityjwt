@@ -67,3 +67,29 @@ If you have a repository set up, clone it. Otherwise, initialize a new Git repos
 ```bash
 git clone https://github.com/yourusername/springsecurityjwt.git
 cd springsecurityjwt
+```
+### 3. Configure application.properties
+Add the following configuration settings in src/main/resources/application.properties
+```bash
+# Server Configuration
+server.port=8005
+
+# Database Configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/taskdb
+spring.datasource.username=your_db_username
+spring.datasource.password=your_db_password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+# JWT Configuration
+jwt.secret=your_jwt_secret_key
+jwt.expiration=3600000
+
+```
+### 4. Create MySQL Database
+Open your MySQL client (e.g., MySQL Workbench).
+
+Execute the following command to create the taskdb database:
+```bash
+CREATE DATABASE taskdb;
+```
