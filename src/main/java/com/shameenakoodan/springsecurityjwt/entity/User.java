@@ -1,6 +1,9 @@
 package com.shameenakoodan.springsecurityjwt.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,6 +15,7 @@ import java.util.List;
 
 @Table(name = "users")
 @Entity
+@Data
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -70,4 +74,9 @@ public class User implements UserDetails {
     }
 
     // Getters and setters
+
+    public String getEmail() {
+        return email;
+    }
+
 }
