@@ -93,4 +93,57 @@ Execute the following command to create the taskdb database:
 ```bash
 CREATE DATABASE taskdb;
 ```
+### 5. Add JWT Dependencies in pom.xml
+### 6. Reload Maven Project
+  In your IntelliJ IDEA:
+  - Right-click on the project.
+  - Navigate to Maven > Reload Project.
 
+### 7. Create Necessary Packages
+- entity
+- repository
+- config
+- service
+- controller
+- dto
+- exception
+
+### 8. Implement Core Components
+Add the following classes to their respective packages:
+
+**Configuration Classes**
+- ApplicationConfiguration
+- JwtAuthenticationFilter
+- SecurityConfiguration
+- Controllers
+- AuthenticationController
+- UserController
+- DTOs
+- LoginResponse
+- LoginUserDto
+- RegisterUserDto
+- UserResponseDto
+
+**Controllers**
+- AuthenticationController
+- UserController
+
+**DTOs**
+- LoginResponse
+- LoginUserDto
+- RegisterUserDto
+- UserResponseDto
+
+**Entities**
+- User
+
+**Services**
+- AuthenticationService
+- UserService
+
+**Repositories**
+- UserRepository
+
+
+**Handling**
+- GlobalExceptionHandler
