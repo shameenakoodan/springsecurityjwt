@@ -93,3 +93,4 @@ Execute the following command to create the taskdb database:
 ```bash
 CREATE DATABASE taskdb;
 ```
+
