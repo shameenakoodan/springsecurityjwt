@@ -147,3 +147,5 @@ Add the following classes to their respective packages:
 
 **Handling**
 - GlobalExceptionHandler
+
+### 9. Running the Application
