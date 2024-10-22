@@ -149,3 +149,15 @@ Add the following classes to their respective packages:
 - GlobalExceptionHandler
 
 ### 9. Running the Application
+Using postman run the application with the following values: 
+```bash
+  url : http://localhost:8005/auth/signup
+  method: POST
+  Body - raw - JSON
+  Sample values:
+  {
+    "fullName":"tom",
+    "email":"tom@mail.com",
+    "password":"test"
+  }
+```
