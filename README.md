@@ -9,7 +9,7 @@ A robust Spring Boot application implementing JWT (JSON Web Token) authenticatio
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Configuration](#configure-applicationproperties)
+- [Configuration](#Configure application.properties)
 - [Project Structure](#project-structure)
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
