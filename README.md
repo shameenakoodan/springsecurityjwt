@@ -44,7 +44,7 @@ Before you begin, ensure you have met the following requirements:
 
 Follow these steps to set up and run the project locally.
 
-### 1. Create a New Spring Boot Project
+#### Create a New Spring Boot Project
 
 Use [Spring Initializr](https://start.spring.io/) to create a new Spring Boot project with the following configurations:
 
@@ -60,7 +60,7 @@ Use [Spring Initializr](https://start.spring.io/) to create a new Spring Boot pr
   - Lombok
   - JWT (e.g., `jjwt`)
 
-### 2. Clone the Repository
+#### Clone the Repository
 
 If you have a repository set up, clone it. Otherwise, initialize a new Git repository.
 
@@ -68,7 +68,7 @@ If you have a repository set up, clone it. Otherwise, initialize a new Git repos
 git clone https://github.com/yourusername/springsecurityjwt.git
 cd springsecurityjwt
 ```
-### 3. Configure application properties
+### Configure application properties
 Add the following configuration settings in src/main/resources/application.properties:
 
 ```bash
