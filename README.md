@@ -9,13 +9,13 @@ A robust Spring Boot application implementing JWT (JSON Web Token) authenticatio
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Configuration](#configure)
+- [Configuration](#configure-applicationproperties)
 - [Project Structure](#project-structure)
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
-    - [User Registration](#user-registration)
-    - [User Login](#user-login)
-    - [Accessing Protected Routes](#accessing-protected-routes)
+  - [User Registration](#user-registration)
+  - [User Login](#user-login)
+  - [Accessing Protected Routes](#accessing-protected-routes)
 - [Testing with Postman](#testing-with-postman)
 - [Exception Handling](#exception-handling)
 - [Reference](#reference)
@@ -53,12 +53,12 @@ Use [Spring Initializr](https://start.spring.io/) to create a new Spring Boot pr
 - **Packaging**: Jar
 - **Java Version**: 23
 - **Dependencies**:
-    - Spring Web
-    - Spring Security
-    - Spring Data JPA
-    - MySQL Driver
-    - Lombok
-    - JWT (e.g., `jjwt`)
+  - Spring Web
+  - Spring Security
+  - Spring Data JPA
+  - MySQL Driver
+  - Lombok
+  - JWT (e.g., `jjwt`)
 
 ### 2. Clone the Repository
 
@@ -67,97 +67,4 @@ If you have a repository set up, clone it. Otherwise, initialize a new Git repos
 ```bash
 git clone https://github.com/yourusername/springsecurityjwt.git
 cd springsecurityjwt
-```
-### 3. Configure application.properties
-Add the following configuration settings in src/main/resources/application.properties
-```bash
-# Server Configuration
-server.port=8005
-
-# Database Configuration
-spring.datasource.url=jdbc:mysql://localhost:3306/taskdb
-spring.datasource.username=your_db_username
-spring.datasource.password=your_db_password
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-
-# JWT Configuration
-jwt.secret=your_jwt_secret_key
-jwt.expiration=3600000
-
-```
-### 4. Create MySQL Database
-Open your MySQL client (e.g., MySQL Workbench).
-
-Execute the following command to create the taskdb database:
-```bash
-CREATE DATABASE taskdb;
-```
-### 5. Add JWT Dependencies in pom.xml
-### 6. Reload Maven Project
-  In your IntelliJ IDEA:
-  - Right-click on the project.
-  - Navigate to Maven > Reload Project.
-
-### 7. Create Necessary Packages
-- entity
-- repository
-- config
-- service
-- controller
-- dto
-- exception
-
-### 8. Implement Core Components
-Add the following classes to their respective packages:
-
-**Configuration Classes**
-- ApplicationConfiguration
-- JwtAuthenticationFilter
-- SecurityConfiguration
-- Controllers
-- AuthenticationController
-- UserController
-- DTOs
-- LoginResponse
-- LoginUserDto
-- RegisterUserDto
-- UserResponseDto
-
-**Controllers**
-- AuthenticationController
-- UserController
-
-**DTOs**
-- LoginResponse
-- LoginUserDto
-- RegisterUserDto
-- UserResponseDto
-
-**Entities**
-- User
-
-**Services**
-- AuthenticationService
-- UserService
-
-**Repositories**
-- UserRepository
-
-
-**Handling**
-- GlobalExceptionHandler
-
-### 9. Running the Application
-Using postman run the application with the following values: 
-```bash
-  url : http://localhost:8005/auth/signup
-  method: POST
-  Body - raw - JSON
-  Sample values:
-  {
-    "fullName":"tom",
-    "email":"tom@mail.com",
-    "password":"test"
-  }
 ```
