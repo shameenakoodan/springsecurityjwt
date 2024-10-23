@@ -9,7 +9,7 @@ A robust Spring Boot application implementing JWT (JSON Web Token) authenticatio
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Configuration](#configure-applicationproperties-file)
+- [Configuration](#configure-application-properties)
 - [Project Structure](#project-structure)
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
@@ -68,7 +68,7 @@ If you have a repository set up, clone it. Otherwise, initialize a new Git repos
 git clone https://github.com/yourusername/springsecurityjwt.git
 cd springsecurityjwt
 ```
-### 3. Configure application.properties
+### 3. Configure application properties
 Add the following configuration settings in src/main/resources/application.properties:
 
 ```bash
