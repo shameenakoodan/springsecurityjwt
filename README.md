@@ -17,7 +17,6 @@ A robust Spring Boot application implementing JWT (JSON Web Token) authenticatio
   - [User Login](#user-login)
   - [Accessing Protected Routes](#accessing-protected-routes)
 - [Testing with Postman](#testing-with-postman)
-- [Exception Handling](#exception-handling)
 - [Reference](#reference)
 - [License](#license)
 
