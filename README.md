@@ -68,3 +68,92 @@ If you have a repository set up, clone it. Otherwise, initialize a new Git repos
 git clone https://github.com/yourusername/springsecurityjwt.git
 cd springsecurityjwt
 ```
+### 3. Configure application.properties
+Add the following configuration settings in src/main/resources/application.properties:
+
+```bash
+# Server Configuration
+server.port=8005
+
+# Database Configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/taskdb
+spring.datasource.username=your_db_username
+spring.datasource.password=your_db_password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+# JWT Configuration
+jwt.secret=your_jwt_secret_key
+jwt.expiration=3600000
+```
+
+### 4. Create MySQL Database
+Open your MySQL client (e.g., MySQL Workbench) and execute the following command to create the taskdb database:
+
+```bash
+CREATE DATABASE taskdb;
+```
+
+### 5. Add JWT Dependencies in pom.xml
+### 6. Reload Maven Project
+In your IntelliJ IDEA:
+
+- Right-click on the project.
+- Navigate to Maven > Reload Project.
+
+```bash
+mkdir -p src/main/java/com/yourusername/project/{entity,repository,config,service,controller,dto,exception}
+```
+
+### 8. Implement Core Components
+Add the following classes to their respective packages:
+
+#### Configuration Classes
+- ApplicationConfiguration
+- JwtAuthenticationFilter
+- SecurityConfiguration
+
+#### Controllers
+
+- AuthenticationController
+- UserController
+
+#### DTOs
+
+- LoginResponse
+- LoginUserDto
+- RegisterUserDto
+- UserResponseDto
+
+#### Entities
+
+- User
+
+#### Services
+
+- AuthenticationService
+- UserService
+
+#### Repositories
+
+- UserRepository
+
+#### Handling
+
+- GlobalExceptionHandler
+
+### 9. Running the Application
+Using Postman, run the application with the following values:
+
+```bash
+
+url : http://localhost:8005/auth/signup
+method: POST
+Body - raw - JSON
+Sample values:
+{
+  "fullName": "tom",
+  "email": "tom@mail.com",
+  "password": "test"
+}
+```
